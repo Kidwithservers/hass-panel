@@ -1,0 +1,166 @@
+.body {
+  background: url(img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font
+}
+
+.topbox {
+  display: flex;
+  flex-direction: row;
+  height: 10vh;
+  width: 100vw;
+}
+
+
+.midbox1 {
+  display: flex;
+  flex-direction: row;
+  height: 35vh;
+  width: 100vw;
+  justify-content: center;
+}
+
+.colbox1 {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.midbox2 {
+  display: flex;
+  flex-direction: row;
+  height: 35vh;
+  width: 100vw;
+  justify-content: center;
+}
+
+.colbox2 {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.botombox {
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+  width: 100vw;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 3vh
+}
+
+.icon {
+  object-fit: contain;
+  max-width: 15vw;
+}
+
+.icons {
+  object-fit: contain;
+  max-width: 8vw;
+}
+.panel {
+  background-color: black;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.inner-panel {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+
+  flex-wrap: wrap;
+}
+.arrow {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: flex-end;
+}
+.arrowi {
+  height: 5vh;
+  object-fit: contain;
+}
+.ipanel {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.lights-flex {
+  background-color: DimGrey;
+  display: flex;
+  width: 48vw;
+  height: 17vh;
+  margin: 1vh;
+  justify-content: flex-end;
+  align-content: center;
+}
+.panel-header {
+  width: 100%;
+  height: 5vh;
+  font-family: 'Exo', sans-serif;
+  color: white;
+  text-align: center;
+  margin: 1vh;
+}
+.panel-subheader {
+  width: 100%;
+  height: 3vh;
+  font-family: 'Exo', sans-serif;
+  color: white;
+  margin: 1vh;
+}
+.light-name {
+  width: 35%;
+  height: 2vh;
+  font-family: 'Exo', sans-serif;
+  color: white;
+  margin-right: auto;
+  margin-left: .5vh;
+  align-self: flex-start;
+}
+.light-icon {
+  width: 8.6vw;
+  height: 8.6vw;
+  margin-right: 1vh;
+  margin-top: auto;
+  margin-bottom: auto;
+  object-fit: contain;
+}
+.light-icon-hh1 {
+  height: auto;
+  width: 8vw;
+  margin-bottom: .5vh;
+  display: block;
+}
+.light-icon-hh2 {
+  height: auto;
+  width: 8vw;
+  margin-top: 1vh;
+  display: block;
+}
+.hh-cont {
+  height: auto;
+  flex-wrap: wrap;
+  margin-right: 1vh;
+  margin-top: auto;
+  margin-bottom: auto;
+}

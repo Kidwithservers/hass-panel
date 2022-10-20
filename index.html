@@ -1,0 +1,165 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/api.js"></script>
+
+  </head>
+  <body class="body">
+    <div class="topbox">
+
+    </div>
+    <div class="midbox1">
+      <div class="colbox1">
+        <img src="css/img/main-1.png" class="icon" onclick="lightsAPI('light.basement_main', 'toggle')" />
+        <img src="css/img/main-2.png" class="icon" onclick="scriptsAPI('script.basement_lights_main_movie')" />
+        <img src="css/img/main-3.png" class="icon" onclick="scriptsAPI('script.basement_lights_main_normal')" />
+        <img src="css/img/main-4.png" class="icon" onclick="scriptsAPI('script.basement_lights_main_dimmed')" />
+      </div>
+    </div>
+    <div class="midbox2">
+      <div class="colbox2">
+        <img src="css/img/main-5.png" class="icon" onclick="scriptsAPI('script.intermission')" />
+        <img src="css/img/main-6.png" class="icon" onclick="lightsAPI('light.basement_playroom', 'toggle')" />
+        <img src="css/img/main-7.png" class="icon" onclick="scriptsAPI('script.basement_lights_main_bright')" />
+        <img src="css/img/main-8.png" class="icon" onclick="scriptsAPI('script.goodnight')" />
+      </div>
+    </div>
+    <div class="botombox">
+      <img src="css/img/light-bulb.png" onclick="showpanel('lights')" class="icons" />
+      <img src="css/img/testicon.png" class="icons" />
+      <img src="css/img/testicon.png" class="icons" />
+      <img src="css/img/testicon.png" class="icons" />
+      <img src="css/img/testicon.png" class="icons" />
+      <img src="css/img/testicon.png" class="icons" />
+    </div>
+    <div class="panel">
+      <div class="inner-panel">
+
+        <div class="lights ipanel">
+          <h2 class="panel-header">Basement Lights Control</h2>
+          <h3 class="panel-subheader">Mainroom</h3>
+          <div class="lights-flex">
+            <h4 class="light-name">All Mainroom Lights</h4>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-cool.png" onclick="lightsAPI('light.basement_main', 'temp', '3900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-mid.png" onclick="lightsAPI('light.basement_main', 'temp', '3400')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-warm.png" onclick="lightsAPI('light.basement_main', 'temp', '2900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-xwarm.png" onclick="lightsAPI('light.basement_main', 'temp', '2650')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/brightness-up.png" onclick="lightsAPI('light.basement_main', 'dim', '20')" />
+              <img class="light-icon-hh2" src="css/img/brightness-down.png" onclick="lightsAPI('light.basement_main', 'dim', '-20')" />
+            </div>
+            <img class="light-icon" src="css/img/toggle.png" onclick="lightsAPI('light.basement_main', 'toggle')" />
+          </div>
+          <div class="lights-flex">
+            <h4 class="light-name">TV Area Lights</h4>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-cool.png" onclick="lightsAPI('light.basement_tv', 'temp', '3900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-mid.png" onclick="lightsAPI('light.basement_tv', 'temp', '3400')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-warm.png" onclick="lightsAPI('light.basement_tv', 'temp', '2900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-xwarm.png" onclick="lightsAPI('light.basement_tv', 'temp', '2650')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/brightness-up.png" onclick="lightsAPI('light.basement_tv', 'dim', '20')" />
+              <img class="light-icon-hh2" src="css/img/brightness-down.png" onclick="lightsAPI('light.basement_tv', 'dim', '-20')" />
+            </div>
+            <img class="light-icon" src="css/img/toggle.png" onclick="lightsAPI('light.basement_tv', 'toggle')" />
+          </div>
+          <div class="lights-flex">
+            <h4 class="light-name">Playroom Lights</h4>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-cool.png" onclick="lightsAPI('light.basement_playroom', 'temp', '3900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-mid.png" onclick="lightsAPI('light.basement_playroom', 'temp', '3400')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-warm.png" onclick="lightsAPI('light.basement_playroom', 'temp', '2900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-xwarm.png" onclick="lightsAPI('light.basement_playroom', 'temp', '2650')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/brightness-up.png" onclick="lightsAPI('light.basement_playroom', 'dim', '20')" />
+              <img class="light-icon-hh2" src="css/img/brightness-down.png" onclick="lightsAPI('light.basement_playroom', 'dim', '-20')" />
+            </div>
+            <img class="light-icon" src="css/img/toggle.png" onclick="lightsAPI('light.basement_playroom', 'toggle')" />
+          </div>
+          <h3 class="panel-subheader">Office</h3>
+          <div class="lights-flex">
+            <h4 class="light-name">All Office Lights</h4>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-cool.png" onclick="lightsAPI('light.basement_office', 'temp', '3900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-mid.png" onclick="lightsAPI('light.basement_office', 'temp', '3400')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-warm.png" onclick="lightsAPI('light.basement_office', 'temp', '2900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-xwarm.png" onclick="lightsAPI('light.basement_office', 'temp', '2650')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/brightness-up.png" onclick="lightsAPI('light.basement_office', 'dim', '20')" />
+              <img class="light-icon-hh2" src="css/img/brightness-down.png" onclick="lightsAPI('light.basement_office', 'dim', '-20')" />
+            </div>
+            <img class="light-icon" src="css/img/toggle.png" onclick="lightsAPI('light.basement_office', 'toggle')" />
+          </div>
+          <div class="lights-flex">
+            <h4 class="light-name">Workspace Lights</h4>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-cool.png" onclick="lightsAPI('light.basement_office_main', 'temp', '3900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-mid.png" onclick="lightsAPI('light.basement_office_main', 'temp', '3400')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-warm.png" onclick="lightsAPI('light.basement_office_main', 'temp', '2900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-xwarm.png" onclick="lightsAPI('light.basement_office_main', 'temp', '2650')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/brightness-up.png" onclick="lightsAPI('light.basement_office_main', 'dim', '20')" />
+              <img class="light-icon-hh2" src="css/img/brightness-down.png" onclick="lightsAPI('light.basement_office_main', 'dim', '-20')" />
+            </div>
+            <img class="light-icon" src="css/img/toggle.png" onclick="lightsAPI('light.basement_office_main', 'toggle')" />
+          </div>
+          <div class="lights-flex">
+            <h4 class="light-name">Desk Light</h4>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-cool.png" onclick="lightsAPI('light.basement_office_desk', 'temp', '3900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-mid.png" onclick="lightsAPI('light.basement_office_desk', 'temp', '3400')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/coltemp-warm.png" onclick="lightsAPI('light.basement_office_desk', 'temp', '2900')" />
+              <img class="light-icon-hh2" src="css/img/coltemp-xwarm.png" onclick="lightsAPI('light.basement_office_desk', 'temp', '2650')" />
+            </div>
+            <div class="hh-cont">
+              <img class="light-icon-hh1" src="css/img/brightness-up.png" onclick="lightsAPI('light.basement_office_desk', 'dim', '20')" />
+              <img class="light-icon-hh2" src="css/img/brightness-down.png" onclick="lightsAPI('light.basement_office_desk', 'dim', '-20')" />
+            </div>
+            <img class="light-icon" src="css/img/toggle.png" onclick="lightsAPI('light.basement_office_desk', 'toggle')" />
+          </div>
+        </div>
+
+        <div class="arrow" onclick="hidepanel()">
+          <img src="css/img/white-arrow.png" class="arrowi" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
